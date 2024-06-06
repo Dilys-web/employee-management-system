@@ -2,7 +2,6 @@ package com.employee.Employee.Management.System.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 @Getter
 @Setter
 @Builder
@@ -23,4 +22,15 @@ public class Employee {
     private String secondName;
     @Column(name = "email_id", nullable = false, unique = true)
     private String email;
+    @Column(name = "address")
+    private String employeeAddress;
+
+    @Column(name = "phone")
+    private String employeePhone;
+//
+//    @CreationTimestamp
+//    @Temporal(TemporalType.TIMESTAMP)
+//    @Column(name = "created_on", updatable = false, nullable = false)
+//    private Date createdOn;
+
 }
