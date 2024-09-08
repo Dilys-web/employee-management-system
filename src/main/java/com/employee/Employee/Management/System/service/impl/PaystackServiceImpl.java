@@ -8,7 +8,7 @@ import com.employee.Employee.Management.System.dto.response.PaymentVerificationR
 import com.employee.Employee.Management.System.entity.PaymentPaystack;
 import com.employee.Employee.Management.System.repository.EmployeeRepository;
 import com.employee.Employee.Management.System.repository.PaystackPaymentRepositoryImpl;
-import com.employee.Employee.Management.System.service.PaystackService;
+import com.employee.Employee.Management.System.service.interfaces.PaystackService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nimbusds.jose.shaded.gson.Gson;
 import org.apache.http.HttpResponse;

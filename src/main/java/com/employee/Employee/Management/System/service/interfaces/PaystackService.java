@@ -1,4 +1,4 @@
-package com.employee.Employee.Management.System.service;
+package com.employee.Employee.Management.System.service.interfaces;
 
 import com.employee.Employee.Management.System.dto.request.CreatePlanDto;
 import com.employee.Employee.Management.System.dto.request.InitializePaymentDto;

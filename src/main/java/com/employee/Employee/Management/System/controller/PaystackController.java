@@ -5,7 +5,7 @@ import com.employee.Employee.Management.System.dto.request.InitializePaymentDto;
 import com.employee.Employee.Management.System.dto.response.CreatePlanResponse;
 import com.employee.Employee.Management.System.dto.response.InitializePaymentResponse;
 import com.employee.Employee.Management.System.dto.response.PaymentVerificationResponse;
-import com.employee.Employee.Management.System.service.PaystackService;
+import com.employee.Employee.Management.System.service.interfaces.PaystackService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -38,9 +38,9 @@ public class PaystackController {
     public InitializePaymentResponse initializePayment( @RequestBody InitializePaymentDto initializePaymentDto) throws Throwable {
         return paystackService.initializePayment(initializePaymentDto);
     }
+
     @GetMapping("/initializepayment")
     @Operation(summary = "initialize payment")
-
     public ResponseEntity<String> welcome() throws Throwable {
         System.out.println("hello world");
         return ResponseEntity.ok("hello world");
