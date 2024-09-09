@@ -7,6 +7,8 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Builder
@@ -28,4 +30,7 @@ public class EmployeeDto {
     private String employeeAddress;
     @Pattern(regexp = "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$", message = "Invalid phone number format")
     private String employeePhone;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
