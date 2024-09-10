@@ -2,6 +2,11 @@ package com.employee.Employee.Management.System.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Builder
@@ -27,10 +32,12 @@ public class Employee {
 
     @Column(name = "phone")
     private String employeePhone;
-//
-//    @CreationTimestamp
-//    @Temporal(TemporalType.TIMESTAMP)
-//    @Column(name = "created_on", updatable = false, nullable = false)
-//    private Date createdOn;
 
+    @CreatedDate
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    @Column(insertable = false)
+    private LocalDateTime updatedAt;
 }
